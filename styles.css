@@ -1,6 +1,7 @@
 :root {
     --main-bg-color: black;
     --main-font-color: bisque;
+    --standard-border-radius: 10px;
 }
 
 * {
@@ -35,15 +36,63 @@ h1 {
 }
 
 .main-container {
+    height: 60vh;
+    width: 50vw;
+
     display: flex;
     align-items: center ;
     margin-top: 20vh;
+
+    background-color: rgba(0, 0, 0, 0.436);
+    border: 1px solid grey;
+    border-radius: var(--standard-border-radius) 
 }
 
+.secondary-bg {
+    background: url(images/ancient-portals.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; 
+    background-size: cover;
+    height: 100%;
+    width: 20vw;
+
+    display: flex;
+    justify-content: center;
+    border-radius: var(--standard-border-radius)
+}
+
+.icon-banner {
+    margin-top: 30%;
+    background-color: rgba(14, 13, 13, 0.655);
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vh;
+
+}
+
+.icon-banner img {
+    width: 8vw;
+    height: auto;
+    
+    
+    
+}
 
 
 ul {
     list-style: none;
     padding-left: 0;
+}
+
+
+
+
+
+button {
+    color: black;
 }
 
