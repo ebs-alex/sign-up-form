@@ -32,16 +32,18 @@ body {
 }
 
 h1 {
+    margin-top: 4vh;
     text-align: center;
+
 }
 
 .main-container {
-    height: 60vh;
-    width: 50vw;
+    height: 70vh;
+    width: 75vw;
 
     display: flex;
-    align-items: center ;
-    margin-top: 20vh;
+    align-items: center;
+    margin-top: 5vh;
 
     background-color: rgba(0, 0, 0, 0.436);
     border: 1px solid grey;
@@ -55,44 +57,130 @@ h1 {
     -o-background-size: cover; 
     background-size: cover;
     height: 100%;
-    width: 20vw;
+    width: 25vw;
 
     display: flex;
-    justify-content: center;
-    border-radius: var(--standard-border-radius)
+    flex-direction: column;
+    text-align: center;
+    border-radius: var(--standard-border-radius);
+}
+
+.byline {
+    margin-top: 2vh;
+    color: aliceblue;
+    background-color: rgba(14, 13, 13, 0.655);
+    padding: 1vw;
 }
 
 .icon-banner {
-    margin-top: 30%;
+    margin-top: 10%;
     background-color: rgba(14, 13, 13, 0.655);
-    width: 100%;
-    height: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1vh;
+    justify-content: center;
+    padding: 5px;
 
 }
 
 .icon-banner img {
     width: 8vw;
     height: auto;
-    
-    
-    
 }
 
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    align-items: center;
+    text-align: center;
+}
+
+.form-container p {
+    margin: 0 10px 50px 10px;
+}
+
+form {
+    /* margin-left: 3vw; */
+    width: 100%;
+}
 
 ul {
     list-style: none;
     padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+
+input {
+
+    width: 100%;
+    align-self: start;
+    /* margin: 1vw; */
+
+}
+
+label {
+    display: flex;
+flex-direction: column;
+    gap: 0.5vw;
+    /* text-align: start; */
+    width: 100%;
+}
+
+.form-inputs {
+
+    background-color: rgba(0, 0, 0, 0.436);
+    height: 30vh;
+    padding: 1vw;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    
+}
+
+.form-inputs:focus-within {
+    box-shadow: 1px 3px 6px rgb(255, 255, 255)
 }
 
 
 
+.form-inputs li {
+    margin: 2vw;
+    
+    
 
+}
+
+
+
+.form-buttons {
+
+    display: flex;
+    gap: 2vh;
+    justify-content: center;
+
+
+
+}
 
 button {
+    /* margin-top: 20%; */
     color: black;
+    padding: 1vh 2vh;
+    background-color: black;
+    color: bisque;
+}
+
+
+button:hover {
+    box-shadow: 1px 3px 6px rgb(255, 255, 255)
 }
 
