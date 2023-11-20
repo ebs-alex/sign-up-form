@@ -152,19 +152,24 @@ input {
     align-self: start;
     opacity: 0.9;
     margin-top: 1vh;
+    border: 2px solid bisque;
+    border-radius: 5px;
 }
 
 input:focus {
     box-shadow: -4px 4px 5px rgb(185, 182, 182);
     transition: box-shadow 0.3s ease-out;
+
 }
 
 input:not(:focus):not(:placeholder-shown):invalid {
     border: 2px solid red;
+    transition: border 0.5s ease-in;
 }
 
-input:not(:placeholder-shown):valid {
+input:not(:placeholder-shown):not(#pwd-confirm) {
     border: 2px solid greenyellow;
+    transition: border 1.5s ease-in;
 }
 
 label {
@@ -238,18 +243,24 @@ button[type="submit"] {
     font-weight: 700;
 }
 
+button:disabled {
+    opacity: 0.5;
+}
 
-button:hover {
+button:enabled {
+    opacity: 1.0;
+    transition: opacity 0.9s ease-in-out;
+}
+
+
+button:not(:disabled):hover {
     box-shadow: 1px 3px 6px rgb(255, 255, 255);
     transition: box-shadow 0.9s ease-in-out;
 }
 
 
-
 .declaration {
-
     width: 100%;
-
 }
 
 textarea {

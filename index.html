@@ -33,12 +33,12 @@
                         <div class="form-items">
                             <li>
                                 <label for="first_name">
-                                    First Name: <input type="text" name="first_name" id="first_name"  pattern="^[A-Za-z]+$" placeholder="letters only" required>
+                                    First Name: <input type="text" name="first_name" id="first_name"  pattern="^[A-Za-z]+$" placeholder="letters only" minlength="1" required>
                                 </label>
                             </li>
                             <li>
                                 <label for="last_name">
-                                    Last Name: <input type="text" name="last_name" id="last_name" pattern="^[A-Za-z]+$" placeholder="letters only" required>
+                                    Last Name: <input type="text" name="last_name" id="last_name" pattern="^[A-Za-z]+$" placeholder="letters only" minlength="1" required>
                                 </label>
                             </li>
                             <li>
@@ -98,7 +98,7 @@
                             </li>
                         </div>
                         <li class="form-buttons">
-                            <Button type="submit">Send</Button>
+                            <Button type="submit" disabled id="submitBtn">Send</Button>
                             <Button type="reset">Reset</Button>
                         </li>
                     </ul>
