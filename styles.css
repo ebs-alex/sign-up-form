@@ -5,12 +5,19 @@
     font-size: 16px;
 }
 
-* {
-    color: var(--main-font-color);
+html {
+    overflow: hidden;
+    height: 100%;
 }
 
+body {
+    overflow: scroll;
+    height: 100%;
+}
+
+
 body, html {
-    width: 100%;
+    color: var(--main-font-color);
 }
 
 html { 
@@ -27,16 +34,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
     width: 100%;
-    /* height: 100vh; */
+
 }
 
 h1 {
     font-size: clamp(20px, 8vw, 60px);
-    margin-top: 4vh;
+    margin-top: 3vh;
     text-align: center;
-
 }
 
 .main-container {
@@ -46,7 +51,8 @@ h1 {
 
     display: flex;
     align-items: center;
-    margin-top: 5vh;
+    /* margin-top: 1vh; */
+    margin-bottom: 15vh;
 
     background-color: rgba(0, 0, 0, 0.436);
     border: 1px solid grey;
@@ -61,7 +67,8 @@ h1 {
     -o-background-size: cover; 
     background-size: cover;
     align-self: stretch;
-    width: 35%;    
+    width: 40%;
+    padding-top: calc(80px - 3vw) ;    
 
     display: flex;
     flex-direction: column;
@@ -70,27 +77,16 @@ h1 {
 }
 
 
-@media (max-width: 720px) {
-    .main-container {
-        flex-direction: column;
-    }
-
-    .secondary-bg {
-        width: 100%;
-        height: auto;
-        
-    }
-  }
-
-
 .byline {
     margin-top: 2vh;
     color: aliceblue;
     background-color: rgba(14, 13, 13, 0.655);
     padding: 1vw;
+    font-size: clamp(18px, 3vw, 35px);
 }
 
 .icon-banner {
+    
     margin-top: 10%;
     background-color: rgba(14, 13, 13, 0.655);
     display: flex;
@@ -134,19 +130,23 @@ ul {
 
 
 input {
-
     width: 100%;
+    height: 2.5vh;
     align-self: start;
-    /* margin: 1vw; */
+    opacity: 0.9;
+}
 
+input:focus {
+    box-shadow: -4px 4px 5px rgb(185, 182, 182);
 }
 
 label {
     display: flex;
-flex-direction: column;
+    flex-direction: column;
     gap: 0.5vw;
-    /* text-align: start; */
+    margin: 1vw;
     width: 100%;
+    text-align: start;
 }
 
 .form-items {
@@ -172,7 +172,7 @@ flex-direction: column;
 
 
 .form-items li {
-    margin: 2vw;
+    margin: 1vh 2vw ;
     
     
 
@@ -193,9 +193,10 @@ flex-direction: column;
 button {
     margin-top: 3vh;
     color: black;
-    padding: clamp(5px, 2vw, 10px) clamp(10px, 3vw, 20px);
+    padding: clamp(5px, 2vw, 10px) clamp(10px, 3vw, 25px);
     font-size: clamp(16px, 2vw, 22px);
     background-color: black;
+    border-radius: 10px;
     color: bisque;
 }
 
@@ -205,3 +206,72 @@ button:hover {
 }
 
 
+
+.declaration {
+
+    width: 100%;
+
+}
+
+textarea {
+    width: fit-content;
+    height: 25vh;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+  }
+
+
+
+  .genders, 
+  .fs-genders {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .fs-genders li {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  fieldset {
+    margin: 3vh 0;
+  }
+
+  #li-zone {
+    display: flex;
+    align-items: center;
+  }
+
+
+@media (min-width: 760px) {
+    textarea {
+        width: 40vw;
+    }
+}
+
+
+@media (max-width: 760px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .secondary-bg {
+        width: 100%;
+        height: auto;
+        padding-top: 0;
+        
+    }
+
+    textarea {
+        width: 60vw;
+    }
+
+  }

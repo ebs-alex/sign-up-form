@@ -50,11 +50,6 @@
                                     Phone: <input type="tel" name="phone_number" id="phone_number">
                                 </label>
                             </li>
-                            <!-- <li>
-                                <label for="declaration">
-                                    Declaration: <textarea name="declaration" id="declaration" cols="30" rows="10" placeholder="state your intent"></textarea>
-                                </label>
-                            </li> -->
                             <li>
                                 <label for="pwd">
                                     Password: <input type="password" name="pwd" id="pwd">
@@ -63,6 +58,39 @@
                             <li>
                                 <label for="pwd-confirm">
                                     Confirm Password: <input type="password" name="pwd-confirm" id="pwd-confirm">
+                                </label>
+                            </li>
+
+                            <fieldset class="fs-genders">
+                                <legend>Gender</legend>
+                                <li>
+                                    <label for="male" class="genders">
+                                        Male:<input type="radio" name="gender" id="male" value="male" checked>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="female" class="genders">
+                                        Female:<input type="radio" name="gender" id="female" value="female">
+                                    </label>
+                                </li>
+                            </fieldset>
+
+                            <li id="li-zone">
+                                <label for="zone">Zone: </label>
+                                <select name="zone" id="zone">
+                                    <option value="SanFrancisco">San Francisco</option>
+                                    <option value="Beijing">Beijing</option>
+                                    <option value="Moscow">Moscow</option>
+                                    <option value="NewYork">New York</option>
+                                    <option value="Havanah">Havanah</option>
+                                </select>
+                
+                            </li>
+                            
+
+                            <li>
+                                <label for="declaration">
+                                    Declaration: <textarea name="declaration" id="declaration" placeholder="state your intent"></textarea>
                                 </label>
                             </li>
                         </div>
