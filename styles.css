@@ -172,6 +172,10 @@ input:not(:placeholder-shown):not(#pwd-confirm) {
     transition: border 1.5s ease-in;
 }
 
+input[type="radio"] {
+    box-shadow: none;
+}
+
 label {
     font-size: 1.2rem;
     display: flex;
