@@ -1,3 +1,12 @@
+@font-face {
+    font-family: "odin";
+    src:
+      url("./fonts/Norse-Bold.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
 :root {
     --main-bg-color: black;
     --main-font-color: bisque;
@@ -39,7 +48,12 @@ body {
 }
 
 h1 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: clamp(20px, 8vw, 60px);
+    font-weight: 800;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
     margin-top: 3vh;
     text-align: center;
 }
@@ -78,11 +92,12 @@ h1 {
 
 
 .byline {
+    font-family: "odin";
+    font-size: clamp(18px, 3vw, 35px);
     margin-top: 2vh;
     color: aliceblue;
     background-color: rgba(14, 13, 13, 0.655);
     padding: 1vw;
-    font-size: clamp(18px, 3vw, 35px);
 }
 
 .icon-banner {
@@ -112,7 +127,9 @@ h1 {
 }
 
 .form-container p {
-    margin: 3vh clamp(10px, 5vw, 50px)
+    margin: 3vh clamp(10px, 5vw, 50px);
+    font-size: 1.4rem;
+    line-height: 2.5rem;
 }
 
 form {
@@ -134,13 +151,24 @@ input {
     height: 2.5vh;
     align-self: start;
     opacity: 0.9;
+    margin-top: 1vh;
 }
 
 input:focus {
     box-shadow: -4px 4px 5px rgb(185, 182, 182);
+    transition: box-shadow 0.3s ease-out;
+}
+
+input:not(:focus):not(:placeholder-shown):invalid {
+    border: 2px solid red;
+}
+
+input:not(:placeholder-shown):valid {
+    border: 2px solid greenyellow;
 }
 
 label {
+    font-size: 1.2rem;
     display: flex;
     flex-direction: column;
     gap: 0.5vw;
@@ -166,7 +194,8 @@ label {
 }
 
 .form-items:focus-within {
-    box-shadow: 1px 3px 6px rgb(255, 255, 255)
+    box-shadow: 1px 3px 6px rgb(255, 255, 255);
+    transition: box-shadow 0.9s ease-in-out;
 }
 
 
@@ -192,17 +221,27 @@ label {
 
 button {
     margin-top: 3vh;
-    color: black;
     padding: clamp(5px, 2vw, 10px) clamp(10px, 3vw, 25px);
-    font-size: clamp(16px, 2vw, 22px);
+    font-size: clamp(16px, 2.3vw, 25px);
     background-color: black;
     border-radius: 10px;
     color: bisque;
 }
 
+button[type="reset"] {
+    background-color: rgb(167, 160, 160);
+    color: black;
+}
+
+button[type="submit"] {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+}
+
 
 button:hover {
-    box-shadow: 1px 3px 6px rgb(255, 255, 255)
+    box-shadow: 1px 3px 6px rgb(255, 255, 255);
+    transition: box-shadow 0.9s ease-in-out;
 }
 
 
@@ -247,7 +286,17 @@ textarea {
 
   #li-zone {
     display: flex;
+    flex-direction: column;
     align-items: center;
+  }
+
+  select {
+    margin-top: 0;
+    width: 200px;
+  }
+  
+  select option {
+    width: 200px;
   }
 
 
@@ -272,6 +321,7 @@ textarea {
 
     textarea {
         width: 60vw;
+        height: 45vh;
     }
 
   }

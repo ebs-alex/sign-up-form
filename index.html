@@ -25,39 +25,40 @@
             <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, praesentium.
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quasi cupiditate nesciunt sequi pariatur dolor.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quasi cupiditate nesciunt sequi pariatur dolor.
             </p>
-            <form action="" method="post">
+            <form action="">
                 <div class="inner-form-container">
                     <ul>
                         <div class="form-items">
                             <li>
                                 <label for="first_name">
-                                    First Name: <input type="text" name="first_name" id="first_name">
+                                    First Name: <input type="text" name="first_name" id="first_name"  pattern="^[A-Za-z]+$" placeholder="letters only" required>
                                 </label>
                             </li>
                             <li>
                                 <label for="last_name">
-                                    Last Name: <input type="text" name="last_name" id="last_name">
+                                    Last Name: <input type="text" name="last_name" id="last_name" pattern="^[A-Za-z]+$" placeholder="letters only" required>
                                 </label>
                             </li>
                             <li>
                                 <label for="email">
-                                    Email: <input type="email" name="email" id="email">
+                                    Email: <input type="email" name="email" id="email" placeholder="valid email"required>
                                 </label>
                             </li>
                             <li>
                                 <label for="phone_number">
-                                    Phone: <input type="tel" name="phone_number" id="phone_number">
+                                    Phone: <input type="tel" name="phone_number" id="phone_number" pattern="^(?:\d{10}|(?:\d{3}[-. ]){2}\d{4})$" placeholder="include area code" minlength="10" required>
                                 </label>
                             </li>
                             <li>
                                 <label for="pwd">
-                                    Password: <input type="password" name="pwd" id="pwd">
+                                    Password: <input type="password" name="pwd" id="pwd" minlength="5" maxlength="16" placeholder="minimum 5 characters" required>
                                 </label>
                             </li>
                             <li>
                                 <label for="pwd-confirm">
-                                    Confirm Password: <input type="password" name="pwd-confirm" id="pwd-confirm">
+                                    Confirm Password: <input type="password" name="pwd-confirm" id="pwd-confirm" minlength="5" maxlength="16" placeholder="match previous"required>
                                 </label>
                             </li>
 
@@ -79,10 +80,12 @@
                                 <label for="zone">Zone: </label>
                                 <select name="zone" id="zone">
                                     <option value="SanFrancisco">San Francisco</option>
+                                    <option value="NewYork">New York</option>
                                     <option value="Beijing">Beijing</option>
                                     <option value="Moscow">Moscow</option>
-                                    <option value="NewYork">New York</option>
+                                    <option value="Caracas">Caracas</option>
                                     <option value="Havanah">Havanah</option>
+                                    <option value="Cairo">Cairo</option>
                                 </select>
                 
                             </li>
@@ -90,7 +93,7 @@
 
                             <li>
                                 <label for="declaration">
-                                    Declaration: <textarea name="declaration" id="declaration" placeholder="state your intent"></textarea>
+                                    Declaration: <textarea name="declaration" id="declaration" placeholder="state your intent" required></textarea>
                                 </label>
                             </li>
                         </div>
